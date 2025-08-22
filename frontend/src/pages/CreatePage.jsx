@@ -11,14 +11,14 @@ const CreatePage = () => {
     const handleAddProduct = () => {
         console.log("Product Created:", newProduct);
     }
-    return <Container maxW={"container.sm"}>
+    return <Container maxW={"container.sm"} pt={20}>
         <VStack spacing={8}>
 
             <Heading as ={'h1'} size={'2xl'} textAlign={"center"} mb={8}>
                 Create New Product
             </Heading>
 
-            <Box bg={useColorModeValue('white', 'gray.800')} p={6} rounded={"lg"} shadow={"md"}>
+            <Box bg={useColorModeValue('white', 'gray.800')} p={6} rounded={"lg"} shadow={"md"} w={"full"}>
                 <VStack spacing={4}>
                     <Input
                         placeholder="Product Name"
