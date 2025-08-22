@@ -3,7 +3,7 @@ import {create} from 'zustand';
 export const useProductStore = create((set) => ({
     products: [],
     setProducts: (products) => set({ products }),
-    create: async (newProduct) => {
+    createProducts: async (newProduct) => {
         if (!newProduct.name || !newProduct.price || !newProduct.image) {
             throw new Error("All fields are required");
         }
@@ -16,5 +16,6 @@ export const useProductStore = create((set) => ({
         });
         const data = await res.json();
         set((state) => ({products: [...state.products, data.data]}));
+        return {success: true, message: "Product Created"};
     }
 }));
