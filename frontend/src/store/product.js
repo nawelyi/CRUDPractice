@@ -5,7 +5,7 @@ export const useProductStore = create((set) => ({
     setProducts: (products) => set({ products }),
     createProducts: async (newProduct) => {
         if (!newProduct.name || !newProduct.price || !newProduct.image) {
-            throw new Error("All fields are required");
+            return {success: false, message: "error creating product"};
         }
         const res = await fetch("/api/products", {
             method:"POST",
