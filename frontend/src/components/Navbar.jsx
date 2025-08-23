@@ -10,7 +10,7 @@ const Navbar = () => {
         h={16}
         alignItems={"center"}
         justifyContent={"space-between"}
-        flexDir={{ base: "column", sd: "row" }}
+        flexDir={{ base: "column", md: "row" }}
         >
 
         <Text
